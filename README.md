@@ -26,8 +26,12 @@ Mogućnost pokretanja i zaustavljanja vozila putem aplikacije, 2D prikaz reljefa
 **Dodatna specifikacija projektnog zadatka**
 
 Izrada upravljačke PCB pločice koja može biti maksimalno dvoslojna.
+
 Upotreba SMD komponenti prilikom izrade štampane pločice.
+
 Minimalna širina veze prilikom rutiranja iznosi 0.254 mm, a minimalno rastojanje izmedju komponenata 0.1 mm.
+
 Upotreba već postojećeg baterijskog napajanja.
+
 Budzet za kupovinu komponenata od 20 do 30 dolara.
 
