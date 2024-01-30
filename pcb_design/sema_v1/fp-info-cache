@@ -1,4 +1,4 @@
-22641527111480854
+22641528149455838
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -55054,6 +55054,13 @@ One digit LED 7 segment SA39-11 SC39-11 SA39-12 SC39-12
 0
 10
 10
+ESP8266-01_ESP-01
+XCVR_ESP8266-01_ESP-01
+
+
+0
+8
+8
 Edge_Connector_Library
 Edge_Connector
 
@@ -61620,13 +61627,6 @@ solder jumper open
 0
 5
 3
-KiCad
-DIP794W56P254L3486H508Q28N
-28-Lead Skinny Plastic Dual In-Line (SP) - 300mil Body [SPDIP]
-Integrated Circuit
-0
-28
-28
 LED_SMD
 LED-APA102-2020
 http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf
