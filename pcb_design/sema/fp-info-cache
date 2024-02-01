@@ -1,4 +1,4 @@
-22641528149455838
+22658594938315542
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -2488,6 +2488,20 @@ Buzzer_Beeper
 Speaker_CUI_CMR-1206S-67
 Speaker, 30mW, 300-7000Hz, IP67 face, 12x6x2,25mm, https://www.cuidevices.com/product/resource/cmr-12062s-67.pdf
 speaker CUI
+0
+2
+2
+CAP_0.1u
+CAPC5750X270N
+2220 (Thickness 2.7mm)
+Capacitor
+0
+2
+2
+CAP_10u
+C2220_FT
+C2220_FT
+Capacitor
 0
 2
 2
@@ -55054,13 +55068,6 @@ One digit LED 7 segment SA39-11 SC39-11 SA39-12 SC39-12
 0
 10
 10
-ESP8266-01_ESP-01
-XCVR_ESP8266-01_ESP-01
-
-
-0
-8
-8
 Edge_Connector_Library
 Edge_Connector
 
@@ -61627,6 +61634,13 @@ solder jumper open
 0
 5
 3
+KUCISTE_WIFI
+791077003
+79107-7003-3
+Connector
+0
+8
+8
 LED_SMD
 LED-APA102-2020
 http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf
@@ -66569,6 +66583,34 @@ DIL DIP PDIP 2.54mm 7.62mm 300mil
 0
 4
 4
+PIC24FJ64GA002
+DIP794W56P254L3486H508Q28N
+28-Lead Skinny Plastic Dual In-Line (SP) - 300mil Body [SPDIP]
+Integrated Circuit
+0
+28
+28
+P_2_HEADER
+HDRV2W66P0X254_1X2_508X254X874P
+M20-9990246_1
+Connector
+0
+2
+2
+P_4_HEADER
+HDRV4W64P0X254_1X4_1016X254X889P
+M20-9990446
+Connector
+0
+4
+4
+P_5_HEADER
+HDRV5W67P0X254_1X5_1229X234X821P
+5-146281-5
+Connector
+0
+5
+5
 Package_BGA
 Alliance_TFBGA-54_8x8mm_Layout9x9_P0.8mm
 Alliance TFBGA 54 pins, 8x8mm, 54 Ball, 9x9 Layout, 0.8mm Pitch, https://www.alliancememory.com/wp-content/uploads/pdf/dram/Alliance_Memory_64M-AS4C4M16SA-CI_v5.0_October_2018.pdf#page=54
@@ -82599,6 +82641,27 @@ Potentiometer vertical Vishay T73YP
 0
 3
 3
+RES_4k7
+RESC6432X65N
+CRGP2512
+Resistor
+0
+2
+2
+RES_10k
+RESC6432X120N
+2512
+Resistor
+0
+2
+2
+RES_470
+RESC6332X65N
+3521 Series (2512)
+Resistor
+0
+2
+2
 RF
 Skyworks_SKY13575_639LF
 http://www.skyworksinc.com/uploads/documents/SKY13575_639LF_203270D.pdf
@@ -93050,3 +93113,10 @@ Varistor VF
 0
 2
 2
+WiFi
+XCVR_ESP8266-01_ESP-01
+
+
+0
+8
+8
