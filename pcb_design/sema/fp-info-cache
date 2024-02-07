@@ -1,4 +1,4 @@
-22658594938315542
+22660305107255135
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -2498,9 +2498,23 @@ Capacitor
 0
 2
 2
+CAP_0.1uF
+C1812
+C1812
+Capacitor
+0
+2
+2
 CAP_10u
 C2220_FT
 C2220_FT
+Capacitor
+0
+2
+2
+CAP_10uF
+C1812
+C1812
 Capacitor
 0
 2
@@ -61634,13 +61648,6 @@ solder jumper open
 0
 5
 3
-KUCISTE_WIFI
-791077003
-79107-7003-3
-Connector
-0
-8
-8
 LED_SMD
 LED-APA102-2020
 http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf
