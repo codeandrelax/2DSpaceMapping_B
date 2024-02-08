@@ -20,3 +20,19 @@ Potrebno je realizovati PCB pločicu koja ispunjava sljedeće zahtjeve:
 ## Aplikacija
 * Razvoj aplikacije za prikazivanje okoline oko vozila.
 * Mogućnost pokretanja i zaustavljanja vozila putem aplikacije, 2D prikaz reljefa.
+
+## Projektovanje štampane ploče
+* Šema 
+![kompletna_sema](https://github.com/codeandrelax/2DSpaceMapping_B/assets/74966262/43537a65-98cc-4a8a-b9fb-845c5a769ed6)
+
+* Layout
+  ![front_cu](https://github.com/codeandrelax/2DSpaceMapping_B/assets/74966262/54fe5a2a-820b-4d44-8ffa-833a05f6830e)
+  ![back_cu](https://github.com/codeandrelax/2DSpaceMapping_B/assets/74966262/6e51d18d-6f20-47ca-a177-1033e38a085d)
+
+* 3D model
+  ![3d_model](https://github.com/codeandrelax/2DSpaceMapping_B/assets/74966262/4429c304-3d05-4c8f-8538-2fbbc5953749)
+ ![3d_model2](https://github.com/codeandrelax/2DSpaceMapping_B/assets/74966262/8a7f46ab-b6f3-4677-9ab6-3f6122012498)
+
+  
+
+
