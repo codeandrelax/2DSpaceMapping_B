@@ -1,0 +1,8 @@
+*-bak
+*-backups
+*-cache*
+*-bak*
+_autosave*
+*_autosave*
+\#auto_saved_files\#
+.\pcb_design\control_board\*-backups\
