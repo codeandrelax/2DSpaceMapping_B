@@ -26,12 +26,13 @@ Potrebno je realizovati PCB pločicu koja ispunjava sljedeće zahtjeve:
 ![kompletna_sema](https://github.com/codeandrelax/2DSpaceMapping_B/assets/74966262/43537a65-98cc-4a8a-b9fb-845c5a769ed6)
 
 * Layout  
-  ![image](https://github.com/codeandrelax/2DSpaceMapping_B/assets/127748379/3bb24229-8b67-4b08-92db-80bd839c3b21)
-  ![back_cu](https://github.com/codeandrelax/2DSpaceMapping_B/assets/74966262/6e51d18d-6f20-47ca-a177-1033e38a085d)
+  ![image](https://github.com/codeandrelax/2DSpaceMapping_B/assets/127748379/36172a35-ee72-4d36-a4de-e3539a7cb17b)
+  ![image](https://github.com/codeandrelax/2DSpaceMapping_B/assets/127748379/3324e113-27ef-4348-a75b-81cf2f7eb596)
 
 * 3D model
-  ![3d_model](https://github.com/codeandrelax/2DSpaceMapping_B/assets/74966262/4429c304-3d05-4c8f-8538-2fbbc5953749)
- ![3d_model2](https://github.com/codeandrelax/2DSpaceMapping_B/assets/74966262/8a7f46ab-b6f3-4677-9ab6-3f6122012498)
+  ![image](https://github.com/codeandrelax/2DSpaceMapping_B/assets/127748379/61105f0d-0a05-4d67-86e9-d1633d7822cd)
+ ![image](https://github.com/codeandrelax/2DSpaceMapping_B/assets/127748379/99947c48-4feb-4a37-850a-dd5d0df69b2c)
+
 
   
 
