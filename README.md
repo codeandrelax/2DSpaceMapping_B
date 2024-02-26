@@ -27,6 +27,8 @@ Potrebno je realizovati PCB pločicu koja ispunjava sljedeće zahtjeve:
 * Layout  
   ![image](https://github.com/codeandrelax/2DSpaceMapping_B/assets/127748379/3bb24229-8b67-4b08-92db-80bd839c3b21)
   ![back_cu](https://github.com/codeandrelax/2DSpaceMapping_B/assets/74966262/6e51d18d-6f20-47ca-a177-1033e38a085d)
+  ![image](https://github.com/codeandrelax/2DSpaceMapping_B/assets/127748379/1006eb37-11cb-4f9b-a70c-6e451aa7aa0a)
+
 
 * 3D model
   ![3d_model](https://github.com/codeandrelax/2DSpaceMapping_B/assets/74966262/4429c304-3d05-4c8f-8538-2fbbc5953749)
