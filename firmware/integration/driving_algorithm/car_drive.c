@@ -3,6 +3,7 @@
  * @brief File containing function definitons for vehicle moving.
 */
 
+#include "car_drive.h"
 
 /**
  * @name Macros used in program 
@@ -11,10 +12,8 @@
 /** @brief Macro that defines speed of the vehicle (0-255) */ 
 #define SPEED 125
 /** @brief I2C address of the device */
-#define DEVICE_ADDR 0x0E
+#define DEVICE_ADDR 0xE0
 /** @} */
-
-
 
 /**
  * @name I2C Communication
@@ -27,18 +26,21 @@ sbit Soft_I2C_Sda_Direction at TRISB2_bit;
 sbit Soft_I2C_Scl_Direction at TRISB3_bit;
 /** @} */
 
+
 /*
  * Function for I2C controller configuration. It start I2C communication, 
  * addresses device, then desired register, and puts some value appropriate value in it.
  * At the end it stops the communication.
 */
-void static I2C_Send_Message(unsigned short dev_addr, unsigned short reg_addr, unsigned short data_value){
-     Soft_I2C_Start();
-     Soft_I2C_Write(dev_addr);
-     Soft_I2C_Write(reg_addr);
-     Soft_I2C_Write(data_value);
-     Soft_I2C_Stop();
+void static I2C_Send_Message(unsigned short dev_addr, unsigned short reg_addr, unsigned short data_value)
+{
+    Soft_I2C_Start();
+    Soft_I2C_Write(dev_addr);
+    Soft_I2C_Write(reg_addr);
+    Soft_I2C_Write(data_value);
+    Soft_I2C_Stop();
 }
+
 
 /*
  * Function that initializes I2C communication. It inits I2C, then sets MODE1 register of
@@ -46,10 +48,10 @@ void static I2C_Send_Message(unsigned short dev_addr, unsigned short reg_addr, u
  * After that set LEDOUT register to 0xAA
 */
 void initialize_car_drive(){
-     Soft_I2C_Init();
-     Delay_ms(100);
-     I2C_Send_Message(DEVICE_ADDR, 0x00, 0x01);
-     I2C_Send_Message(DEVICE_ADDR, 0xE8, 0xAA);
+    Soft_I2C_Init();
+    Delay_ms(100);
+    I2C_Send_Message(DEVICE_ADDR, 0x00, 0x01);
+    I2C_Send_Message(DEVICE_ADDR, 0xE8, 0xAA);
 }
 
 /*
@@ -58,11 +60,37 @@ void initialize_car_drive(){
 */
 void static forward()
 {
-     I2C_Send_Message(DEVICE_ADDR, 0x02, 0);
-     I2C_Send_Message(DEVICE_ADDR, 0x03, SPEED);
-     I2C_Send_Message(DEVICE_ADDR, 0x04, 0);
-     I2C_Send_Message(DEVICE_ADDR, 0x05, SPEED);
+    I2C_Send_Message(DEVICE_ADDR, 0x02, 0);
+    I2C_Send_Message(DEVICE_ADDR, 0x03, SPEED);
+    I2C_Send_Message(DEVICE_ADDR, 0x04, 0);
+    I2C_Send_Message(DEVICE_ADDR, 0x05, SPEED);
 }
+
+
+/*
+ * Function for driving the vehicle backward. Setting PWMx registers of PCA9633 to appropriate
+ * values for driving backwards.
+*/
+void static reverse()
+{
+    I2C_Send_Message(DEVICE_ADDR, 0x02, SPEED);
+    I2C_Send_Message(DEVICE_ADDR, 0x03, 0);
+    I2C_Send_Message(DEVICE_ADDR, 0x04, SPEED);
+    I2C_Send_Message(DEVICE_ADDR, 0x05, 0);
+}
+
+/*
+ * Function for stopping the vehicle. Setting PWMx registers of PCA9633 to appropriate
+ * values for braking.
+*/
+void static brake()
+{
+    I2C_Send_Message(DEVICE_ADDR, 0x02, 0);
+    I2C_Send_Message(DEVICE_ADDR, 0x03, 0);
+    I2C_Send_Message(DEVICE_ADDR, 0x04, 0);
+    I2C_Send_Message(DEVICE_ADDR, 0x05, 0);
+}
+
 
 /*
  * Function for driving vehicle left. Setting PWMx registers of PCA9633 to appropriate
@@ -70,11 +98,13 @@ void static forward()
 */
 void static left()
 {
-     I2C_Send_Message(DEVICE_ADDR, 0x02, 0);
-     I2C_Send_Message(DEVICE_ADDR, 0x03, 0);
-     I2C_Send_Message(DEVICE_ADDR, 0x04, 0);
-     I2C_Send_Message(DEVICE_ADDR, 0x05, SPEED);
+    I2C_Send_Message(DEVICE_ADDR, 0x02, 0);
+    I2C_Send_Message(DEVICE_ADDR, 0x03, 0);
+    I2C_Send_Message(DEVICE_ADDR, 0x04, 0);
+    I2C_Send_Message(DEVICE_ADDR, 0x05, SPEED);
+
 }
+
 
 /*
  * Function for driving vehicle right. Setting PWMx registers of PCA9633 to appropriate
@@ -82,61 +112,69 @@ void static left()
 */
 void static right()
 {
-     I2C_Send_Message(DEVICE_ADDR, 0x02, 0);
-     I2C_Send_Message(DEVICE_ADDR, 0x03, 0);
-     I2C_Send_Message(DEVICE_ADDR, 0x04, 0);
-     I2C_Send_Message(DEVICE_ADDR, 0x05, SPEED);
+    I2C_Send_Message(DEVICE_ADDR, 0x02, 0);
+    I2C_Send_Message(DEVICE_ADDR, 0x03, SPEED);
+    I2C_Send_Message(DEVICE_ADDR, 0x04, 0);
+    I2C_Send_Message(DEVICE_ADDR, 0x05, 0);
 
 }
 
+
 /*
- * Function for stopping the vehicle. Setting PWMx registers of PCA9633 to appropriate
- * values for braking.
+ * Function for driving vehicle forward. This is just basically going forward.
 */
-void static brake(){
-     I2C_Send_Message(DEVICE_ADDR, 0x02, 0);
-     I2C_Send_Message(DEVICE_ADDR, 0x03, 0);
-     I2C_Send_Message(DEVICE_ADDR, 0x04, 0);
-     I2C_Send_Message(DEVICE_ADDR, 0x05, 0);
+void drive_forward()
+{
+    forward();
+}
+
+
+/*
+ * Function for driving vehicle backwards. This is just basically going reverse.
+*/
+void drive_reverse(){
+    reverse();
+}
+
+
+/*
+ * Function for stopping the vehicle.
+*/
+void stop()
+{
+    brake();
 }
 
 /*
  * Function for driving vehicle east. This means going left 90 degrees for some time, 
  * and then going forward.
 */
-void go_east()
-{
+void drive_full_left(){
+    // go left 90 degress
     left();
-    Delay_ms(1000);
+    Delay_ms(1100);
     brake();
-    forward();
+
+     // go forward
+    drive_forward();
 
 }
+
 
 
 /*
  * Function for driving vehicle north east. This means going left 45 degrees for some time, 
  * and then going forward.
 */
-void go_north_east()
-{
-     // go left 45 degress
+void drive_small_left(){
+    // go left 45 degress
     left();
-    Delay_ms(750);
+    Delay_ms(850);
     brake();
 
     // go forward
-    forward();
+    drive_forward();
 
-}
-
-
-/*
- * Function for driving vehicle north. This is just basically going forward.
-*/
-void go_north()
-{
-    forward();
 }
 
 
@@ -144,36 +182,26 @@ void go_north()
  * Function for driving vehicle north west. This means going right 45 degrees for some time, 
  * and then going forward.
 */
-void go_north_west()
-{
+void drive_full_right(){
     right();
-    Delay_ms(750);
+    Delay_ms(1100);
     brake();
 
     // go forward
-    forward();
+    drive_forward();
 }
 
 
+
 /*
- * Function for driving vehicle west. This means going right 90 degrees for some time, 
+ * Function for driving vehicle north west. This means going right 45 degrees for some time, 
  * and then going forward.
 */
-void go_west()
-{
-
+void drive_small_right(){
     right();
-    Delay_ms(1000);
+    Delay_ms(850);
     brake();
 
     // go forward
-    forward();
-}
-
-/*
- * Function for stopping the car. Just calls brake function.
-*/
-void stop()
-{
-    brake();
+    drive_forward();
 }

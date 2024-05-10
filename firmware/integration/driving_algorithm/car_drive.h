@@ -6,7 +6,6 @@
 #ifndef CAR_DRIVE
 #define CAR_DRIVE
 
-
 /**
  * @brief Function for initializing necessary things for driving.
  *
@@ -18,59 +17,22 @@ void initialize_car_drive();
 
 
 /**
- * @brief Function for driving the car north.
+ * @brief Function for driving the car forward.
  *
- * This function is used when the desired direction of the car is north,
- * by north it is meant to go straight forward. 
- * The sides of world notation is used because the car can go in more directions
- * than just forward,left, right.
+ * This function is used when the desired direction of the car is forward. The
+ * will be simply just go forward with desired speed that is set with macro SPEED.
 */
-void go_north();
+void drive_forward();
 
 
 /**
- * @brief Function for driving the car north east.
+ * @brief Function for driving the car backwards.
  *
- * This function is used when the desired direction of the car is east,
- * by north east it is meant a direction that is just between forward and right.
- * The sides of world notation is used because the car can go in more directions
- * than just forward,left, right.
+ * This function is used when the desired direction of the car is in the opposite
+ * direction of the forward. This is the special possible direction of the car,
+ * it is used in special cases when the car is too close to the obstacle in front.
 */
-void go_north_east();
-
-
-/**
- * @brief Function for driving the car east.
- *
- * This function is used when the desired direction of the car is east,
- * by east it is meant a direction that is on the right from its
- * current position.
- * The sides of world notation is used because the car can go in more directions
- * than just forward,left, right.
-*/
-void go_east();
-
-/**
- * @brief Function for driving the car north west.
- *
- * This function is used when the desired direction of the car is north west,
- * by north west it is meant a direction that is just between forward and left.
- * The sides of world notation is used because the car can go in more directions
- * than just forward,left, right.
-*/
-void go_north_west();
-
-
-/**
- * @brief Function for driving the car west.
- *
- * This function is used when the desired direction of the car is west,
- * by north west it is meant a direction that is is on the right from its
- * current position.
- * The sides of world notation is used because the car can go in more directions
- * than just forward,left, right.
-*/
-void go_west();
+void drive_reverse();
 
 
 /**
@@ -80,4 +42,43 @@ void go_west();
 */
 void stop();
 
-#endif  /* CAR_DRIVE */
+/**
+ * @brief Function for driving the car left.
+ *
+ * This function is used when the desired direction of the car is 90 degrees left,
+ * that is the direction that is exactly on the left side of the current vehicle position.
+ * This directions is one of the five possible directions of the vehicle 
+ * (besides the reverse)
+*/
+void drive_full_left();
+
+/**
+ * @brief Function for driving the car left.
+ *
+ * This function is used when the desired direction of the car is 45 degrees left,
+ * that is directions between full left and forward. This directions is one of the
+ * five possible directions of the vehicle (besides the reverse).
+*/
+void drive_small_left();
+
+/**
+ * @brief Function for driving the car right.
+ *
+ * This function is used when the desired direction of the car is 90 degrees right,
+ * that is the direction that is exactly on the right side of the current vehicle position.
+ * This directions is one of the five possible directions of the vehicle
+ * (besides the reverse)
+*/
+void drive_full_right();
+
+
+/**
+ * @brief Function for driving the car right.
+ *
+ * This function is used when the desired direction of the car is 45 degrees right,
+ * that is directions between full right and forward. This directions is one of the
+ * five possible directions of the vehicle (besides the reverse).
+*/
+void drive_small_right();
+
+#endif
