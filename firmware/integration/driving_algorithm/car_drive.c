@@ -1,6 +1,12 @@
 /**
  * @file car_drive.c
  * @brief File containing function definitons for vehicle moving.
+ * This file contains several function definition that are needed
+ * for driving the the vehicle. There are 5 possible directions of
+ * moving: forward, left, full left, right, full right. Alse there is
+ * additional directions that is used in some cases: reverse.
+ * Since I2C interface is needed for driving the vehicle, there is alse
+ * initialization of I2C interface, and function for sending I2C messages.
 */
 
 #include "car_drive.h"
@@ -55,7 +61,7 @@ void initialize_car_drive(){
 }
 
 /*
- * Function for driving vehicle forward. Setting PWMx registers of PCA9633 to appropriate
+ * Function for setting PWMx registers of PCA9633 to appropriate
  * values for going forward.
 */
 void static forward()
@@ -68,7 +74,7 @@ void static forward()
 
 
 /*
- * Function for driving the vehicle backward. Setting PWMx registers of PCA9633 to appropriate
+ * Function for setting PWMx registers of PCA9633 to appropriate
  * values for driving backwards.
 */
 void static reverse()
@@ -80,7 +86,7 @@ void static reverse()
 }
 
 /*
- * Function for stopping the vehicle. Setting PWMx registers of PCA9633 to appropriate
+ * Function for setting PWMx registers of PCA9633 to appropriate
  * values for braking.
 */
 void static brake()
@@ -93,7 +99,7 @@ void static brake()
 
 
 /*
- * Function for driving vehicle left. Setting PWMx registers of PCA9633 to appropriate
+ * Function for setting PWMx registers of PCA9633 to appropriate
  * values for going left.
 */
 void static left()
@@ -146,8 +152,9 @@ void stop()
 }
 
 /*
- * Function for driving vehicle east. This means going left 90 degrees for some time, 
- * and then going forward.
+ * Function for driving the vehicle 90 degrees to the left. This means driving
+ * vehicle left for some time, needed for it to turn left 90 degrees, and then 
+ * driving forward.
 */
 void drive_full_left(){
     // go left 90 degress
@@ -163,8 +170,9 @@ void drive_full_left(){
 
 
 /*
- * Function for driving vehicle north east. This means going left 45 degrees for some time, 
- * and then going forward.
+ * Function for driving the vehicle 45 degrees to the left. This means driving
+ * vehicle left for some time, needed for it to turn left 45 degrees, and then 
+ * driving forward.
 */
 void drive_small_left(){
     // go left 45 degress
@@ -179,8 +187,9 @@ void drive_small_left(){
 
 
 /*
- * Function for driving vehicle north west. This means going right 45 degrees for some time, 
- * and then going forward.
+ * Function for driving the vehicle 90 degrees to the left. This means driving
+ * vehicle left for some time, needed for it to turn left 90 degrees, and then 
+ * driving forward.
 */
 void drive_full_right(){
     right();
@@ -194,8 +203,9 @@ void drive_full_right(){
 
 
 /*
- * Function for driving vehicle north west. This means going right 45 degrees for some time, 
- * and then going forward.
+ * Function for driving the vehicle 90 degrees to the left. This means driving
+ * vehicle left for some time, needed for it to turn left 90 degrees, and then 
+ * driving forward.
 */
 void drive_small_right(){
     right();

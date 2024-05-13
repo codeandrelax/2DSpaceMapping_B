@@ -1,6 +1,8 @@
 /**
  * @file servo_sensor.h
  * @brief File containing function declarations for servo_sensor module.
+ * This file contains function declarations of functions that are used
+ * for controlling the servo_sensor component of the vehicle.
 */
 
 

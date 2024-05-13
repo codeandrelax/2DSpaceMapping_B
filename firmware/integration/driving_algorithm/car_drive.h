@@ -1,6 +1,7 @@
 /**
  * @file car_drive.h
  * @brief File containing function declarations for vehicle moving.
+ * All function definitions of this module is in car_drive.c.
 */
 
 #ifndef CAR_DRIVE
@@ -20,7 +21,8 @@ void initialize_car_drive();
  * @brief Function for driving the car forward.
  *
  * This function is used when the desired direction of the car is forward. The
- * will be simply just go forward with desired speed that is set with macro SPEED.
+ * will be simply just go forward with desired speed that is set with macro SPEED,
+ * defined in car_drive.c file.
 */
 void drive_forward();
 
@@ -28,9 +30,9 @@ void drive_forward();
 /**
  * @brief Function for driving the car backwards.
  *
- * This function is used when the desired direction of the car is in the opposite
- * direction of the forward. This is the special possible direction of the car,
- * it is used in special cases when the car is too close to the obstacle in front.
+ * This function is used when the desired direction of the car is backwards. 
+ * This is the special possible direction of the car, it is used in special cases when the
+ * car is too close to the obstacle in front.
 */
 void drive_reverse();
 
@@ -41,6 +43,7 @@ void drive_reverse();
  * This function is used when the car needs to stop.
 */
 void stop();
+
 
 /**
  * @brief Function for driving the car left.
@@ -81,4 +84,4 @@ void drive_full_right();
 */
 void drive_small_right();
 
-#endif
+#endif /* CAR_DRIVE.H */

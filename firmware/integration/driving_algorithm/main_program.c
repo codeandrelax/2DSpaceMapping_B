@@ -1,6 +1,11 @@
 /**
  * @file main_program.c
  * @brief Main file of the program.
+ 
+ * This file contains main function of the program that serves as an
+ * entry point. It controls all the behavious of the complete program.
+ * It initialies all the necesseary components of the system, and then
+ * using the functions from other modueles, does all the work.
 */
 
 
@@ -123,7 +128,7 @@ void main()
         drive_forward();
         while(1)
         {
-        		/* Drive forward until obstacle, get sensor reading and decide */
+        		/* Drive forward until obstacle, get sensor reading and decide where to go */
                 sensor_reading = ADC1_Get_Sample(9);
                 if(sensor_reading >= 300)
                 {
