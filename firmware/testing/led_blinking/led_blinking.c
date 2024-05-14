@@ -1,3 +1,27 @@
+/**
+ * @file led_blinking.c
+ *
+ * @brief File containing code for testing microcontroller.
+ *
+ * This file contains testing code for microcontroller of
+ * the system. It is a simple code that just sets all pins
+ * of the MCU as digital, and initializes one pin as an
+ * output pin, and sets it to zero. On that pin the LED will
+ * be connected. After that in a while loop LED is turned on
+ * and off periodically. 
+ * The purpose of the code is to test that the MCU is capable
+ * of handling basic code, and that it can be used for following
+ * work.
+*/
+
+
+/**
+ * @ Main function, entry point
+ * 
+ * In the main function all the job is done, the pins of the MCU are set
+ * and configured, and LED is turned on and off in while loop.
+ * 
+*/
 void main() {
 
 
